@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFR-sv-Qc8">
+                                <rect key="frame" x="265" y="285" width="69" height="30"/>
+                                <state key="normal" title="Show Log">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bHX-Lf-hBI" kind="presentation" id="2mt-67-WpD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="cFR-sv-Qc8" secondAttribute="centerY" id="S1i-eT-XnE"/>
+                            <constraint firstAttribute="centerX" secondItem="cFR-sv-Qc8" secondAttribute="centerX" id="lWG-Ty-beA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Logger View Controller-->
+        <scene sceneID="NAN-z6-qij">
+            <objects>
+                <viewController id="bHX-Lf-hBI" customClass="LoggerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KeB-jw-aQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="txv-ly-C30"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XJa-kY-UXS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5h-lI-I37">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWX-5g-Qn8">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Done" id="pBY-7T-GdU">
+                                        <connections>
+                                            <action selector="doneTapped:" destination="bHX-Lf-hBI" id="trQ-cL-iYy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CBd-hd-9Ls"/>
+                                    <barButtonItem title="Delete" id="YhX-pe-ZG5">
+                                        <connections>
+                                            <action selector="deleteTapped:" destination="bHX-Lf-hBI" id="Z5S-wl-Mno"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S5h-lI-I37" firstAttribute="top" secondItem="XJa-kY-UXS" secondAttribute="top" id="0oO-u2-Jvt"/>
+                            <constraint firstItem="jWX-5g-Qn8" firstAttribute="leading" secondItem="S5h-lI-I37" secondAttribute="leading" id="3tR-pi-cUb"/>
+                            <constraint firstItem="jWX-5g-Qn8" firstAttribute="leading" secondItem="XJa-kY-UXS" secondAttribute="leading" id="Heu-wu-Ws1"/>
+                            <constraint firstItem="jWX-5g-Qn8" firstAttribute="bottom" secondItem="txv-ly-C30" secondAttribute="top" id="PSc-J9-7og"/>
+                            <constraint firstItem="jWX-5g-Qn8" firstAttribute="top" secondItem="S5h-lI-I37" secondAttribute="bottom" id="XQ1-ql-asz"/>
+                            <constraint firstItem="jWX-5g-Qn8" firstAttribute="trailing" secondItem="S5h-lI-I37" secondAttribute="trailing" id="ZyM-XB-ECV"/>
+                            <constraint firstAttribute="trailing" secondItem="S5h-lI-I37" secondAttribute="trailing" id="t1Y-8Q-sOa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtVwLogs" destination="S5h-lI-I37" id="s8D-NO-cnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuD-iK-DHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="487"/>
+        </scene>
+    </scenes>
+</document>
